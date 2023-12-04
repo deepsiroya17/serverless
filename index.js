@@ -57,7 +57,7 @@ exports.handler = async (event) => {
 
 async function successEmail(email, fileName, url) {
   const emailData = {
-      from: 'Download Status <downloads@dev.deppcloud.me>',
+      from: 'Download Status <downloads@deppcloud.me>',
       to: email,
       subject: 'Submission Downloaded',
       text: `Hello,\n\nYour requested GitHub release has been downloaded and stored in Google Cloud Storage. File Name: ${fileName}\nDownload Link: ${url}\n\nRegards,\nCSYE-6225 Team`
@@ -67,7 +67,7 @@ async function successEmail(email, fileName, url) {
 
 async function failureEmail(email, error) {
   const mailData = {
-      from: 'Error Notification <errors@dev.deppcloud.me>',
+      from: 'Error Notification <errors@deppcloud.me>',
       to: email,
       subject: 'Error in Processing Your Submission',
       text: `There was an error processing your submission: ${error.message}`
